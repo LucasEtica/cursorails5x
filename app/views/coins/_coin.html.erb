@@ -3,15 +3,21 @@
     <strong>Description:</strong>
     <%= coin.description %>
   </p>
+  <br>
 
   <p>
-    <strong>Acronym:</strong>
+    <strong>Sigla:</strong>
     <%= coin.acronym %>
   </p>
+  <br>
 
   <p>
-    <strong>Url image:</strong>
+    <strong>Image</strong>
+    <%# <img src="< %= coin.url_image % >" style="width: 30px; height: 30px"> %>
+    <%# image_tag coin.url_image, width: 30, height: 30 %>
+    <%= image_tag coin.url_image, size: "30x30" %>
     <%= coin.url_image %>
   </p>
+  <br>
 
 </div>
