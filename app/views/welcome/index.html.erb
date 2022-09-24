@@ -1,11 +1,16 @@
 <h1>Seja Bem vindo</h1>
+<p>
+    Data: <%= data_br(Date.today) %>
+</p>
+
+<%= lucas_oi %>
 
 <ul>
+    <%# <li> %>
+        <%# <a href="/coins">Cadastro de Moedas</a> %>
+    <%# </li> %>
     <li>
-        <a href="/coins">Cadastro de Moedas</a>
-    </li>
-    <li>
-        <%= link_to "Cadastro de Moedas", "/coins" %> <br>
+        <%# link_to "Cadastro de Moedas", "/coins" %>
         <%= link_to "Cadastro de Moedas", coins_path %> 
     </li>
 </ul>
