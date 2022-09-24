@@ -27,7 +27,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: projeto_1_development
+  database: cursorails5x_development
   pool: 5
   host: localhost
   username: postgres
@@ -36,7 +36,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: projeto_1_test
+  database: cursorails5x_test
   host: localhost
   pool: 5
   username: postgres
