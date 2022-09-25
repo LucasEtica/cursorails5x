@@ -1,14 +1,22 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Coins</h1>
+<h1>Coins</h1> <br>
+<%= link_to "New coin", new_coin_path %>
 
 <div id="coins">
-  <% @coins.each do |coin| %>
-    <%= render coin %>
-    <p>
-      <%= link_to "Show this coin", coin %>
-    </p>
-  <% end %>
+  <table>
+    <thead>
+        <tr>
+          <th>Sigla</th>
+          <th>Descrição</th>
+          <th>Image</th>
+        </tr>
+    </thead>
+    <tbody>
+      <% @coins.each do |coin| %>
+        <%= render coin %>
+      <% end %>
+    </tbody>
+  </table>
 </div>
 
-<%= link_to "New coin", new_coin_path %>

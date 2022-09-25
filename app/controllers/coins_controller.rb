@@ -1,5 +1,5 @@
 class CoinsController < ApplicationController
-  layout 'adm'
+  # layout 'adm'
 
   before_action :set_coin, only: %i[ show edit update destroy ]
 
@@ -39,7 +39,7 @@ class CoinsController < ApplicationController
   # PATCH/PUT /coins/1 or /coins/1.json
   def update
     respond_to do |format|
-      if @coin.update(coin_params)
+      if @coin.update(coin_params) # Aqui chama a função para dar permição para os parametros
         format.html { redirect_to coin_url(@coin), notice: "Coin was successfully updated." }
         format.json { render :show, status: :ok, location: @coin }
       else
@@ -66,7 +66,9 @@ class CoinsController < ApplicationController
     end
 
     # Only allow a list of trusted parameters through.
-    def coin_params
-      params.require(:coin).permit(:description, :acronym, :url_image)
+    def coin_params # Função para dar permissão para os parametros
+      params.require(:coin).permit(:description, :acronym, :url_image) 
+      # Ele pega os parametros, 'separa' cada um com o require e com o .permit da a permissão para os quais estiverem no '()'
+      # É uma boa maneira de evitar a edição de campos de admin, tirando a permissão para não admins.
     end
 end

@@ -1,23 +1,18 @@
-<div id="<%= dom_id coin %>">
-  <p>
-    <strong>Description:</strong>
-    <%= coin.description %>
-  </p>
-  <br>
+<div id="<%= coin.id %>">
 
-  <p>
-    <strong>Sigla:</strong>
-    <%= coin.acronym %>
-  </p>
-  <br>
-
-  <p>
-    <strong>Image</strong>
-    <%# <img src="< %= coin.url_image % >" style="width: 30px; height: 30px"> %>
-    <%# image_tag coin.url_image, width: 30, height: 30 %>
-    <%= image_tag coin.url_image, size: "30x30" %>
-    <%= coin.url_image %>
-  </p>
-  <br>
+  <tr>
+    <td>
+      <%= coin.acronym %>
+    </td>
+    <td>
+      <%= coin.description %>
+    </td>
+    <td>
+      <%= image_tag coin.url_image, size: "30x30" %>
+    </td>
+    <td>
+          <%= link_to "Show this coin", coin %>
+    </td>
+  </tr>
 
 </div>
