@@ -1,15 +1,28 @@
 <h1>Seja Bem vindo</h1>
+<br>
+
 <p>
     Data: <%= data_br(Date.today) %>
 </p>
+<br>
+
+<p>
+    <%= link_to "Passa parametro!", "/inicio?nome=Lucas" %>
+
+    Exemplo de parametros na URL: nome = <%= @nome %>
+</p>
+<br>
 
 <p>
     Você está no ambiente de  <%= ambiente_rails %>
 </p>
+<br>
 
 <%= lucas_oi %>
+<br>
 
 <%= link_to "Todas as rotas", "/rails/info/routes" %>
+<br>
 
 <ul>
     <%# <li> %>
