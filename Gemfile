@@ -7,6 +7,8 @@ gem 'pg'
 
 gem 'pry-rails'
 
+gem 'tty-spinner'
+
 # gem 'scaffold', '~> 0.0.3'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
