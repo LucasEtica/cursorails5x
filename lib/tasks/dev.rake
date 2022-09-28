@@ -2,8 +2,12 @@
 namespace :dev do
   desc "Configura o ambiente de desenvolvimento" # É a descrição que irá aparecer no terminal, rails -T db
   task setup: :environment do
-    # Sem o puts ele não irá mostrar o que aconteceu.
-    puts %x(rails db:drop db:create db:migrate db:seed) # Quando executarmos a aplicação como desenvolvimento, ele executará isso no terminal com %x()
+    if Rails.env.development?
+      # Sem o puts ele não irá mostrar o que aconteceu.
+      puts %x(rails db:drop db:create db:migrate db:seed) # Quando executarmos a aplicação como desenvolvimento, ele executará isso no terminal com %x()
+    else
+      puts "Você não está em ambiente de desenvolvimento!"
+    end
   end
 
 end
